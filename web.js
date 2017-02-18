@@ -4,7 +4,7 @@ var app = express.createServer(express.logger());
 
 var basePath = './mod1-solution';
 
-app.use(express.static('basePath'));
+app.use(express.static(basePath));
 
 app.get('/', function(request, response) {
   var fs = require('fs');
