@@ -2,11 +2,13 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-app.use(express.static('./mod1-solution'));
+var basePath = './mod1-solution';
+
+app.use(express.static('basePath'));
 
 app.get('/', function(request, response) {
   var fs = require('fs');
-  var buf = fs.readFileSync('./mod1-solution/index.html');  
+  var buf = fs.readFileSync(basePath+'/index.html');  
   response.send(buf.toString());
 });
 
