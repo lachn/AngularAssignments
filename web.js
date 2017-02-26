@@ -2,7 +2,7 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var basePath = './mod1-solution';
+var basePath = '.';
 
 app.use(express.static(basePath));
 
